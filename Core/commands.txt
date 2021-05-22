@@ -1,0 +1,9 @@
+py manage.py makemigrations --dry-run --verbosity 3
+py manage.py runserver
+py manage.py createsuperuser
+pip install coverage
+coverage run --omit='*/venv/*' manage.py test
+coverage html
+pip install djangorestframework==3.12.4
+pip install djangorestframework-simplejwt ==4.4.0
+pip install PyJWT==1.7.1
